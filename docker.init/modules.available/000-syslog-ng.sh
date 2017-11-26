@@ -1,7 +1,3 @@
-#!/bin/bash
-
-. docker-func.in
-
 p_start[syslog-ng]="/usr/sbin/syslog-ng --no-caps --pidfile /var/run/syslog-ng.pid"
 p_pid[syslog-ng]="stop_syslog-ng"
 
@@ -38,5 +34,3 @@ EOF
 }
 
 before_service_start_hooks+=("create_syslog_config")
-
-call_main_hook
